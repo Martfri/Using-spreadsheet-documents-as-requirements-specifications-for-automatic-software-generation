@@ -1,8 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@using VT1.Areas.Identity.Data
+@using MT.Areas.Identity.Data
 
-@inject SignInManager<VT1User> SignInManager
-@inject UserManager<VT1User> UserManager
+@inject SignInManager<MTUser> SignInManager
+@inject UserManager<MTUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

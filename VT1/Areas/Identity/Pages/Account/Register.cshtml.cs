@@ -18,23 +18,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using VT1.Areas.Identity.Data;
+using MT.Areas.Identity.Data;
 
-namespace VT1.Areas.Identity.Pages.Account
+namespace MT.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<VT1User> _signInManager;
-        private readonly UserManager<VT1User> _userManager;
-        private readonly IUserStore<VT1User> _userStore;
-        private readonly IUserEmailStore<VT1User> _emailStore;
+        private readonly SignInManager<MTUser> _signInManager;
+        private readonly UserManager<MTUser> _userManager;
+        private readonly IUserStore<MTUser> _userStore;
+        private readonly IUserEmailStore<MTUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<VT1User> userManager,
-            IUserStore<VT1User> userStore,
-            SignInManager<VT1User> signInManager,
+            UserManager<MTUser> userManager,
+            IUserStore<MTUser> userStore,
+            SignInManager<MTUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -155,27 +155,27 @@ namespace VT1.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private VT1User CreateUser()
+        private MTUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<VT1User>();
+                return Activator.CreateInstance<MTUser>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(VT1User)}'. " +
-                    $"Ensure that '{nameof(VT1User)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(MTUser)}'. " +
+                    $"Ensure that '{nameof(MTUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<VT1User> GetEmailStore()
+        private IUserEmailStore<MTUser> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<VT1User>)_userStore;
+            return (IUserEmailStore<MTUser>)_userStore;
         }
     }
 }

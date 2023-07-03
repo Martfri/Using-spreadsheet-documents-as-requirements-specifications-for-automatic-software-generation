@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using VT1.Models;
-using VT1.Services;
+using MT.Models;
+using MT.Services;
 using Microsoft.AspNetCore.Authorization;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using System.Data;
 
-namespace VT1.Controllers
+namespace MT.Controllers
 {
     public class HomeController : Controller
     {

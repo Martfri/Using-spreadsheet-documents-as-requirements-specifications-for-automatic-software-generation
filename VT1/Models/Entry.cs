@@ -1,4 +1,4 @@
-﻿namespace VT1.Models
+﻿namespace MT.Models
 {
     public class Entry
     {

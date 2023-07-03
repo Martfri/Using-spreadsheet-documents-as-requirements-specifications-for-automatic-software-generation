@@ -14,16 +14,16 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using VT1.Areas.Identity.Data;
+using MT.Areas.Identity.Data;
 
-namespace VT1.Areas.Identity.Pages.Account
+namespace MT.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        private readonly SignInManager<VT1User> _signInManager;
+        private readonly SignInManager<MTUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<VT1User> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<MTUser> signInManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

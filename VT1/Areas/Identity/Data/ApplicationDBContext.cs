@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using VT1.Areas.Identity.Data;
+using MT.Areas.Identity.Data;
 
-namespace VT1.Areas.Identity.Data;
+namespace MT.Areas.Identity.Data;
 
-public class ApplicationDBContext : IdentityDbContext<VT1User>
+public class ApplicationDBContext : IdentityDbContext<MTUser>
 {
     public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options)
         : base(options)

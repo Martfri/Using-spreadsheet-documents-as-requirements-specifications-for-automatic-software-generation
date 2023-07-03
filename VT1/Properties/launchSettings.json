@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "VT1": {
+    "MT": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

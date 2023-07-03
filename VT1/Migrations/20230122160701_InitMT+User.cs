@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace VT1.Migrations
+namespace MT.Migrations
 {
-    public partial class InitVTUser : Migration
+    public partial class InitMTUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
